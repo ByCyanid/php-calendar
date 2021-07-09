@@ -62,11 +62,6 @@ MySQL Event Schema
 ```
 
 
-## Additional Readings & Resources
-
-* FullCalendar documentation: https://fullcalendar.io/docs#toc
-* FullCalendar repo: https://github.com/fullcalendar/fullcalendar
-* FullCalendar with MySQL event scheduling: https://github.com/jamelbaz/FullCalendar-BS3-PHP-MySQL
 
 ## Built With
 
@@ -85,17 +80,3 @@ Submit a PR and I'll review. Look for untagged/unassigned issues to help with.
 
 Version 1.2.0
 
-## Authors
-
-* **Matthew Waldron** - (http://waldronmatthew.com)
-* **FullCalendar** - (https://fullcalendar.io)
-* **jamelbaz** https://github.com/jamelbaz/FullCalendar-BS3-PHP-MySQL
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-* Repo built on Adam Shaw's FC: https://github.com/fullcalendar/fullcalendar
-* Repo forked from jamelbaz's repository: https://github.com/jamelbaz/FullCalendar-BS3-PHP-MySQL
