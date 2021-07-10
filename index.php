@@ -230,7 +230,7 @@ if(!$_SESSION['id']){
 			</div>
 		  </div>
 		</div>
-		<div class="container" style="width:100%; top: 620px; left:1150px; padding:7px;">
+		<div class="container" style=" width: 103px; height: 100px; padding:7px;">
 			<div class="row">
 				<div class="col-md-4">
 					<form action="cik.php" method="POST" id="frmcik">
