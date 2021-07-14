@@ -67,6 +67,10 @@ form .svgContainer:after {
   border: solid 2.5px #217093;
   border-radius: 50%;
 }
+
+#git{
+  background-color: #ff1654;
+}
 form .inputGroup {
   margin: 0 0 2em;
   padding: 0;

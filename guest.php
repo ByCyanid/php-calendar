@@ -77,13 +77,6 @@ $events = $req->fetchAll();
 </head>
 
 <body>
-<?php
-session_start();
-if(!$_SESSION['id']){
- header("location:login.php");// sayfa.php eğer session yok ise yönlendirilecek sayfadır
-} 
-
-?>
     <!-- Page Content -->
     <div class="container">
 
@@ -97,69 +90,7 @@ if(!$_SESSION['id']){
         </div>
         <!-- /.row -->
 		<!-- Modal -->
-<div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-     <form class="form-horizontal" method="POST" action="./core/add-event.php" action="cik.php">
-			
-			  <div class="modal-header">
-			  <h4 class="modal-title" id="myModalLabel">Etkinlik Ekle</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Kapat"><span aria-hidden="true">&times;</span></button>
-			  </div>
-			  <div class="modal-body">
-				
-				  <div class="form-group">
-					<label for="title" class="col-sm-2 control-label">Başlık</label>
-					<div class="col-sm-10">
-					  <input type="text" name="title" class="form-control" id="title" placeholder="Başlık">
-					</div>
-				  </div>
-				  <div class="form-group">
-					<label for="description" class="col-sm-2 control-label">Açıklama</label>
-					<div class="col-sm-10">
-					  <input type="text" name="description" class="form-control" id="description" placeholder="Açıklama">
-					</div>
-				  </div>
-				  <div class="form-group">
-					<label for="color" class="col-sm-2 control-label">Renk</label>
-					<div class="col-sm-10">
-					  <select name="color" class="form-control" id="color">
-						  <option style="color:#0071c5;" value="#0071c5">&#9724; Koyu Mavi</option>
-						  <option style="color:#40E0D0;" value="#40E0D0">&#9724; Turkuaz</option>
-						  <option style="color:#008000;" value="#008000">&#9724; Yeşil</option>						  
-						  <option style="color:#FFD700;" value="#FFD700">&#9724; Sarı</option>
-						  <option style="color:#FF8C00;" value="#FF8C00">&#9724; Turuncu</option>
-						  <option style="color:#FF0000;" value="#FF0000">&#9724; Kırmızı</option>
-						  <option style="color:#000;" value="#000">&#9724; Siyah</option>
-						  
-						</select>
-					</div>
-				  </div>
-				  <div class="container">
-				  <div class="row">
-				  <div class="form-group">
-					<label for="start" class="col-sm-12 control-label">Tarih Başlat</label>
-					<div class="col-sm-12">
-					  <input type="text" name="start" class="form-control" id="start" readonly>
-					</div>
-				  </div>
-				  <div class="form-group">
-					<label for="end" class="col-sm-12 control-label">Tarih Bitir</label>
-					<div class="col-sm-12">
-					  <input type="text" name="end" class="form-control" id="end" readonly>
-					</div>
-				  </div>
-				</div>
-				</div>
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-				<button type="submit" class="btn btn-primary">Kaydet</button>
-			  </div>
-			</form>
-    </div>
-  </div>
-</div>
+
 		
 		<!-- Modal -->
 <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -167,46 +98,38 @@ if(!$_SESSION['id']){
     <div class="modal-content">
 			<form class="form-horizontal" method="POST" action="./core/edit-title.php">
 			  <div class="modal-header">
-			  <h4 class="modal-title" id="myModalLabel">Etkinliği Düzenle</h4>
+			  <h4 class="modal-title" id="myModalLabel">Etkinliği Görüntüle</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Kapat"><span aria-hidden="true">&times;</span></button>
 			  </div>
 			  <div class="modal-body">
 				
-				  <div class="form-group">
+				  <div class="form-group" >
 					<label for="title" class="col-sm-2 control-label">Başlık</label>
 					<div class="col-sm-10">
-					  <input type="text" name="title" class="form-control" id="title" placeholder="Başlık">
+					  <input type="text" name="title" class="form-control" id="title" placeholder="Başlık" readonly>
 					</div>
 				  </div>
 				  <div class="form-group">
 					<label for="description" class="col-sm-2 control-label">Açıklama</label>
 					<div class="col-sm-10">
-					  <input type="text" name="description" class="form-control" id="description" placeholder="Açıklama">
+					  <input type="text" name="description" class="form-control" id="description" placeholder="Açıklama" readonly>
 					</div>
 				  </div>
 				  <div class="form-group">
-					<label for="color" class="col-sm-2 control-label">Renk</label>
-					<div class="col-sm-10">
-					  <select name="color" class="form-control" id="color">
-						  <option style="color:#0071c5;" value="#0071c5">&#9724; Koyu Mavi</option>
-						  <option style="color:#40E0D0;" value="#40E0D0">&#9724; Turkuaz</option>
-						  <option style="color:#008000;" value="#008000">&#9724; Yeşil</option>						  
-						  <option style="color:#FFD700;" value="#FFD700">&#9724; Sarı</option>
-						  <option style="color:#FF8C00;" value="#FF8C00">&#9724; Turuncu</option>
-						  <option style="color:#FF0000;" value="#FF0000">&#9724; Kırmızı</option>
-						  <option style="color:#000;" value="#000">&#9724; Siyah</option>
+					<label for="color" class="col-sm-2 control-label" readonly>Renk</label>
+					<div class="col-sm-10" readonly>
+					  <select name="color" class="form-control" id="color" readonly>
+						  <option style="color:#0071c5;" value="#0071c5" >&#9724; Koyu Mavi</option>
+						  <option style="color:#40E0D0;" value="#40E0D0" >&#9724; Turkuaz</option>
+						  <option style="color:#008000;" value="#008000" >&#9724; Yeşil</option>						  
+						  <option style="color:#FFD700;" value="#FFD700" >&#9724; Sarı</option>
+						  <option style="color:#FF8C00;" value="#FF8C00" >&#9724; Turuncu</option>
+						  <option style="color:#FF0000;" value="#FF0000" >&#9724; Kırmızı</option>
+						  <option style="color:#000;" value="#000" >&#9724; Siyah</option>
 						  
 						</select>
 					</div>
 				  </div>
-				    <div class="form-group"> 
-						<div class="col-sm-2">
-						  <label onclick="toggleCheck('check1');" class="label-off" for="check1" id="check1_label">
-						 Sil
-						</label>
-						<input class="nocheckbox" type="checkbox" id="check1" name="delete">
-						</div>
-					</div>
 					<script>
 					function toggleCheck(check) {
 						if ($('#'+check).is(':checked')) {
@@ -218,23 +141,16 @@ if(!$_SESSION['id']){
 						}
 					}		  
 					</script>
-				  <input type="hidden" name="id" class="form-control" id="id">
-				
-				
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-				<button type="submit" class="btn btn-primary">Kaydet</button>
 			  </div>
 			</form>
 			</div>
 		  </div>
 		</div>
-		<div class="container" style=" width: 103px; height: 100px; padding:7px;">
-			<div class="row">
+		<div class="container" style="width:103px; top: 620px; left:1150px; padding:7px;">
+			<div class="row" >
 				<div class="col-md-4">
-					<form action="cik.php" method="POST" id="frmcik">
-					<button type="submit" class="btn btn-danger" id="cik">Çıkış Yap</button>
+					<form action="login.php" method="POST" id="frmcik">
+					<button type="submit" class="btn btn-primary" >Giriş Yap</button>
 				</div>
 			</div>
 			

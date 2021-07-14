@@ -10,7 +10,32 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<form action="giris.php" method="POST">
+<?php
+if (isset($_POST['yonlendir'])) {
+	header("location:guest.php");
+}
+else if(isset($_POST['giris'])){
+	session_start();
+	$db = new PDO("mysql:host=localhost;dbname=login;charset=utf8", "root", "");
+	$db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$kadi = trim(filter_input(INPUT_POST,'kullanici_adi',FILTER_SANITIZE_STRING));
+	$sifre = trim(filter_input(INPUT_POST,'sifre',FILTER_SANITIZE_STRING));
+try{
+    $user = $db->query("SELECT * FROM admingiris WHERE user = '$kadi' AND pass = '$sifre'")->fetch();
+    if ($user) {
+    $_SESSION['id']=$user['id'];
+    header("location: index.php");
+    }
+    else{
+        header("location: login.php");
+    }
+}
+catch(PDOException $hataa){
+    die("Hata: " . $hataa -> getMessage());
+}
+}
+?>
+<form method="POST">
 	<div class="svgContainer">
 		<div>
 			<svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
@@ -131,9 +156,16 @@
 		</label>
 	</div>
 	<div class="inputGroup inputGroup3">
-		<button id="login">Giriş Yap</button>
+		<button id="login" name="giris">Giriş Yap</button>
+	</div>	
+
+	<div class="inputGroup inputGroup3">
+		<button id="git" name="yonlendir">Takvimi Aç</button>
 	</div>	
 </form>
+
+
+
 <!-- partial -->
  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 <script  src="./script.js"></script>
