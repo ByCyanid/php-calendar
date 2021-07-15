@@ -100,7 +100,7 @@ if(!$_SESSION['id']){
 <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-     <form class="form-horizontal" method="POST" action="./core/add-event.php" action="cik.php">
+     <form class="form-horizontal" method="POST" action="./core/add-event.php">
 			
 			  <div class="modal-header">
 			  <h4 class="modal-title" id="myModalLabel">Etkinlik Ekle</h4>
