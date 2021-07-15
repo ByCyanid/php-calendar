@@ -126,7 +126,7 @@ if(!$_SESSION['id']){
 					  <select name="color" class="form-control" id="color">
 						  <option style="color:#0071c5;" value="#0071c5">&#9724; Koyu Mavi</option>
 						  <option style="color:#40E0D0;" value="#40E0D0">&#9724; Turkuaz</option>
-						  <option style="color:#008000;" value="#008000">&#9724; Yeşil</option>						  
+						  <option style="color:#008000;" value="#008000">&#9724; Yeşil</option>				  
 						  <option style="color:#FFD700;" value="#FFD700">&#9724; Sarı</option>
 						  <option style="color:#FF8C00;" value="#FF8C00">&#9724; Turuncu</option>
 						  <option style="color:#FF0000;" value="#FF0000">&#9724; Kırmızı</option>
@@ -138,13 +138,13 @@ if(!$_SESSION['id']){
 				  <div class="container">
 				  <div class="row">
 				  <div class="form-group">
-					<label for="start" class="col-sm-12 control-label">Tarih Başlat</label>
+					<label for="start" class="col-sm-12 control-label">Tarih Başlangıç</label>
 					<div class="col-sm-12">
 					  <input type="text" name="start" class="form-control" id="start" readonly>
 					</div>
 				  </div>
 				  <div class="form-group">
-					<label for="end" class="col-sm-12 control-label">Tarih Bitir</label>
+					<label for="end" class="col-sm-12 control-label">Tarih Bitiş</label>
 					<div class="col-sm-12">
 					  <input type="text" name="end" class="form-control" id="end" readonly>
 					</div>
@@ -220,7 +220,6 @@ if(!$_SESSION['id']){
 					</script>
 				  <input type="hidden" name="id" class="form-control" id="id">
 				
-				
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
@@ -240,11 +239,6 @@ if(!$_SESSION['id']){
 			
 		</form>
 		</div>
-		
-		
-
-
-
     </div>
     <!-- /.container -->
 
