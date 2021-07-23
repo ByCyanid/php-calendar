@@ -34,7 +34,9 @@ $events = $req->fetchAll();
     <!-- Custom CSS -->
     
 	 <style>
-    
+    body{
+    	background-color: #158467;
+    }
 	#calendar {
 		max-width: 1200px;
 	}
@@ -61,7 +63,8 @@ $events = $req->fetchAll();
 	
 	  #calendar a.fc-event {
   color: #fff; /* bootstrap default styles make it black. undo */
-  background-color: #0065A6;
+  background-color: #09015F;
+
 }
 
 
