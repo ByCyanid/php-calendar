@@ -16,6 +16,7 @@
 
 body .fc { /* extra precedence to overcome jqui */
 	font-size: 1em;
+
 }
 
 
@@ -46,24 +47,24 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-unthemed .fc-today {
-	background: #fcf8e3;
+	background: #2A9DF4;
 }
 
 .fc-highlight { /* when user is selecting cells */
-	background: #bce8f1;
+	background: #11698E;
 	opacity: .3;
 	filter: alpha(opacity=30); /* for IE */
 }
 
 .fc-bgevent { /* default look for background events */
-	background: rgb(143, 223, 130);
+	background: rgb(40, 121, 255);
 	opacity: .3;
 	filter: alpha(opacity=30); /* for IE */
 }
 
 .fc-nonbusiness { /* default look for non-business-hours areas */
 	/* will inherit .fc-bgevent's styles */
-	background: #d7d7d7;
+	background: #2879FF;
 }
 
 

@@ -24,6 +24,7 @@ $events = $req->fetchAll();
 
     <title>Takvim</title>
 	
+	
 	<!-- FullCalendar -->
 	<link href='css/fullcalendar.min.css' rel='stylesheet' />
     <!-- Bootstrap Core CSS -->
@@ -34,9 +35,7 @@ $events = $req->fetchAll();
     <!-- Custom CSS -->
     
 	 <style>
-    body{
-    	background-color: #158467;
-    }
+   
 	#calendar {
 		max-width: 1200px;
 	}
