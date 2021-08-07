@@ -74,5 +74,5 @@ if ($_POST['recurrence']) {
 }
 
 // back to fullCalendar
-header('Location: '.$_SERVER['HTTP_REFERER']);
+header('Location: ../index.php']);
 ?>

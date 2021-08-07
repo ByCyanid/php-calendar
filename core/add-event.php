@@ -17,16 +17,17 @@ if (isset($_POST['title'])) {
 
 	if ($prepareQuery == false) {
 	 print_r($auth->errorInfo());
-	 die ('Error preparing the query.');
+	 die ('Error preparing the query.');//Ekleme Başarısız !!!
 	}
 
 	$executeQuery = $prepareQuery->execute();
 
 	if ($executeQuery == false) {
 	 print_r($prepareQuery->errorInfo());
-	 die ('Error executing the query.');
+	 die ('Error executing the query.');//Ekleme Başarısız !!!
 	}
 }
 
-header('Location: '.$_SERVER['HTTP_REFERER']);
+header('Location: ../index.php');
+//Ekleme Başarılı !!!
 ?>

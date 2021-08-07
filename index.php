@@ -2,6 +2,7 @@
 require_once('./utils/auth.php');
 
 
+
 $sql = "SELECT id, title, description, start, end, color FROM events ";
 
 $req = $auth->prepare($sql);
@@ -225,7 +226,7 @@ if(!$_SESSION['id']){
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-				<button type="submit" class="btn btn-primary">Kaydet</button>
+				<button type="submit" class="btn btn-primary">Güncelle</button>
 			  </div>
 			</form>
 			</div>
